@@ -12,12 +12,15 @@ const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navLinks = document.querySelectorAll("[data-navlink]");
 const overlay = document.querySelector("[data-overlay]");
 const iconBox = document.querySelector(".icon-box");
+const stopScroll = function(){
+    document.body.classList.toggle("nav-open", navbar.classList.contains("active"))    
+}
 
 const toggleNav = function(){
     navbar.classList.toggle("active");
     iconBox.classList.toggle("active");
     overlay.classList.toggle("active");
-    document.body.classList.toggle("active");
+    stopScroll();
 }
 addEventOnElements(navTogglers, "click", toggleNav)
 addEventOnElements(navLinks, "click", toggleNav)

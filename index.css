@@ -50,7 +50,7 @@ html{
     font-size: 10px;
     scroll-behavior: smooth;
 }
-body.active{
+body.nav-open{
     overflow-y: hidden;
 }
 .btn{
@@ -338,6 +338,9 @@ body.active{
 
 /* -----media queries----- */
 @media(min-width: 768px){
+    body.nav-open{
+        overflow-y: scroll;
+    }
     .icon-box, .overlay{
         display: none;
     }
